@@ -1,0 +1,3 @@
+class LandingState {
+  const LandingState();
+}

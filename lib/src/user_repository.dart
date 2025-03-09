@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:real_social/src/models/real_user.dart';
 import 'package:real_social/src/user_auth_state.dart';
-// import 'package:real_social/src/supabase.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -11,6 +10,8 @@ part 'user_repository.g.dart';
 
 const _currentUserKey = 'user';
 
+// TODO: Create a custom local storage instead
+// https://pub.dev/packages/supabase_flutter#a-idcustom-localstorageacustom-localstorage
 @riverpod
 class UserRepository extends _$UserRepository {
   @override

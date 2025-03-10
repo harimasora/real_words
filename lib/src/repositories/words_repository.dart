@@ -1,7 +1,7 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:real_social/src/models/real_word.dart';
-import 'package:real_social/src/repositories/user_repository.dart';
-import 'package:real_social/src/services/words_service.dart';
+import 'package:real_words/src/models/real_word.dart';
+import 'package:real_words/src/repositories/user_repository.dart';
+import 'package:real_words/src/services/words_service.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'words_repository.g.dart';

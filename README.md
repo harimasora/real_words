@@ -1,3 +1,3 @@
-# real_social
+# real_words
 
 A new Flutter project.

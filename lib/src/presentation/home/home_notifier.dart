@@ -1,5 +1,5 @@
-import 'package:real_social/src/repositories/user_repository.dart';
-import 'package:real_social/src/repositories/words_repository.dart';
+import 'package:real_words/src/repositories/user_repository.dart';
+import 'package:real_words/src/repositories/words_repository.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import 'home_state.dart';

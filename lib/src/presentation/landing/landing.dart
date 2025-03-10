@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:real_social/src/presentation/landing/landing_notifier.dart';
+import 'package:real_words/src/presentation/landing/landing_notifier.dart';
 
 class LandingPage extends HookConsumerWidget {
   const LandingPage({super.key});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:real_social/src/router/router_provider.dart';
+import 'package:real_words/src/router/router_provider.dart';
 
 class RealRouter extends HookConsumerWidget {
   const RealRouter({super.key});
@@ -11,7 +11,7 @@ class RealRouter extends HookConsumerWidget {
 
     // TODO: Could add themes, translation services, etc.
     return MaterialApp.router(
-      title: 'Real Social',
+      title: 'Real Words',
       theme: ThemeData.light().copyWith(
         scaffoldBackgroundColor: Colors.orange,
         elevatedButtonTheme: ElevatedButtonThemeData(

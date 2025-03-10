@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:real_social/src/models/real_user.dart';
-import 'package:real_social/src/presentation/home/home.dart';
-import 'package:real_social/src/presentation/landing/landing.dart';
-import 'package:real_social/src/repositories/user_repository.dart';
+import 'package:real_words/src/models/real_user.dart';
+import 'package:real_words/src/presentation/home/home.dart';
+import 'package:real_words/src/presentation/landing/landing.dart';
+import 'package:real_words/src/repositories/user_repository.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'router_provider.g.dart';

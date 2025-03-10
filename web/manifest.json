@@ -1,6 +1,6 @@
 {
-    "name": "real_social",
-    "short_name": "real_social",
+    "name": "real_words",
+    "short_name": "real_words",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

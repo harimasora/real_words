@@ -1,6 +1,6 @@
-import 'package:real_social/src/services/auth_service.dart';
-import 'package:real_social/src/models/real_user.dart';
-import 'package:real_social/src/services/user_auth_state.dart';
+import 'package:real_words/src/services/auth_service.dart';
+import 'package:real_words/src/models/real_user.dart';
+import 'package:real_words/src/services/user_auth_state.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'user_repository.g.dart';

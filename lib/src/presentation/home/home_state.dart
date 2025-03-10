@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:real_social/src/models/real_word.dart';
+import 'package:real_words/src/models/real_word.dart';
 
 part 'home_state.freezed.dart';
 

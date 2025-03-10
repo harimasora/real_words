@@ -1,4 +1,4 @@
-import 'package:real_social/src/models/real_word.dart';
+import 'package:real_words/src/models/real_word.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 

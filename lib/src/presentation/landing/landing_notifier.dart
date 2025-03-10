@@ -1,4 +1,4 @@
-import 'package:real_social/src/repositories/user_repository.dart';
+import 'package:real_words/src/repositories/user_repository.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import 'landing_state.dart';

@@ -10,6 +10,15 @@ class RealRouter extends HookConsumerWidget {
     final router = ref.watch(routerProvider);
 
     // TODO: Could add themes, translation services, etc.
-    return MaterialApp.router(title: 'Real Social', routerConfig: router.config());
+    return MaterialApp.router(
+      title: 'Real Social',
+      theme: ThemeData.light().copyWith(
+        scaffoldBackgroundColor: Colors.orange,
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(foregroundColor: Colors.black, backgroundColor: Colors.white),
+        ),
+      ),
+      routerConfig: router.config(),
+    );
   }
 }

@@ -28,28 +28,66 @@ class HomePage extends HookConsumerWidget {
     }, [currentWord]);
 
     return Scaffold(
-      body: Column(
-        children: [
-          Expanded(
-            child: ListView.builder(
-              itemCount: state.words.length,
-              itemBuilder: (context, index) => Text(state.words[index].toString()),
-            ),
-          ),
-          Row(
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Flexible(
-                child: TextFormField(
-                  controller: controller,
-                  onFieldSubmitted: (_) => notifier.addWord(),
-                  onChanged: notifier.setWord,
+              Expanded(
+                flex: 2,
+                child: DecoratedBox(
+                  decoration: BoxDecoration(color: Colors.orangeAccent, borderRadius: BorderRadius.circular(8)),
+                  child:
+                      state.words.isEmpty
+                          ? Center(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text('No favorite words 😭'),
+                                SizedBox(height: 8),
+                                Text('Use the field below to add something'),
+                              ],
+                            ),
+                          )
+                          : ListView.separated(
+                            itemCount: state.words.length,
+                            separatorBuilder: (context, index) => Divider(color: Colors.orange),
+                            itemBuilder: (context, index) => ListTile(title: Text(state.words[index].word)),
+                          ),
                 ),
               ),
-              IconButton.filled(onPressed: state.currentWord.isEmpty ? null : notifier.addWord, icon: Icon(Icons.add)),
+              Expanded(
+                flex: 1,
+                child: Column(
+                  children: [
+                    SizedBox(height: 24),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: TextFormField(
+                            controller: controller,
+                            onFieldSubmitted: (_) => notifier.addWord(),
+                            onChanged: notifier.setWord,
+                            onTapOutside: (_) {
+                              FocusManager.instance.primaryFocus?.unfocus();
+                            },
+                          ),
+                        ),
+                        IconButton.filled(
+                          onPressed: state.currentWord.isEmpty ? null : notifier.addWord,
+                          icon: Icon(Icons.add),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 24),
+                  ],
+                ),
+              ),
+              ElevatedButton(onPressed: notifier.signOut, child: Text('Sign out')),
             ],
           ),
-          ElevatedButton(onPressed: notifier.signOut, child: Text('Sign out')),
-        ],
+        ),
       ),
     );
   }

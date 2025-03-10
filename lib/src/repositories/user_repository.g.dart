@@ -1,27 +1,27 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'words_repository.dart';
+part of 'user_repository.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$wordsRepositoryHash() => r'fbd869dbb3f8c3862b314cfdc864608c1c1e4154';
+String _$userRepositoryHash() => r'c1361c4785bd1e1f7082b50102626305d9c5abe6';
 
-/// See also [WordsRepository].
-@ProviderFor(WordsRepository)
-final wordsRepositoryProvider =
-    AutoDisposeNotifierProvider<WordsRepository, List<RealWord>>.internal(
-      WordsRepository.new,
-      name: r'wordsRepositoryProvider',
+/// See also [UserRepository].
+@ProviderFor(UserRepository)
+final userRepositoryProvider =
+    AutoDisposeNotifierProvider<UserRepository, RealUser?>.internal(
+      UserRepository.new,
+      name: r'userRepositoryProvider',
       debugGetCreateSourceHash:
           const bool.fromEnvironment('dart.vm.product')
               ? null
-              : _$wordsRepositoryHash,
+              : _$userRepositoryHash,
       dependencies: null,
       allTransitiveDependencies: null,
     );
 
-typedef _$WordsRepository = AutoDisposeNotifier<List<RealWord>>;
+typedef _$UserRepository = AutoDisposeNotifier<RealUser?>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

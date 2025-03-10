@@ -9,6 +9,7 @@ class RealRouter extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final router = ref.watch(routerProvider);
 
+    // TODO: Could add themes, translation services, etc.
     return MaterialApp.router(title: 'Real Social', routerConfig: router.config());
   }
 }

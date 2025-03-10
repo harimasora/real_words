@@ -1,5 +1,5 @@
+import 'package:real_social/src/repositories/user_repository.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'landing_state.dart';
 
@@ -11,10 +11,7 @@ class LandingNotifier extends _$LandingNotifier {
   LandingState build() => const LandingState();
 
   Future<void> signInWithEmail() async {
-    await Supabase.instance.client.auth.signInWithPassword(password: '123456', email: 'real@social.com');
-  }
-
-  Future<void> signOut() async {
-    await Supabase.instance.client.auth.signOut();
+    /// Hardcoded for demonstration purpose.
+    await ref.read(userRepositoryProvider.notifier).signInWithPassword(email: 'real@social.com', password: '123456');
   }
 }

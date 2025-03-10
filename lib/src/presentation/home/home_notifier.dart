@@ -1,6 +1,6 @@
-import 'package:real_social/src/words_repository.dart';
+import 'package:real_social/src/repositories/user_repository.dart';
+import 'package:real_social/src/repositories/words_repository.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'home_state.dart';
 
@@ -16,8 +16,7 @@ class HomeNotifier extends _$HomeNotifier {
 
   Future<void> addWord() async {
     if (state.currentWord.isNotEmpty) {
-      final notifier = ref.read(wordsRepositoryProvider.notifier);
-      await notifier.addWord(state.currentWord);
+      await ref.read(wordsRepositoryProvider.notifier).addWord(state.currentWord);
       state = state.copyWith(currentWord: '');
     }
   }
@@ -27,6 +26,6 @@ class HomeNotifier extends _$HomeNotifier {
   }
 
   Future<void> signOut() async {
-    await Supabase.instance.client.auth.signOut();
+    await ref.read(userRepositoryProvider.notifier).signOut();
   }
 }

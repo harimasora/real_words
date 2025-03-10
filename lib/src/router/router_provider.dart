@@ -4,7 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:real_social/src/models/real_user.dart';
 import 'package:real_social/src/presentation/home/home.dart';
 import 'package:real_social/src/presentation/landing/landing.dart';
-import 'package:real_social/src/user_repository.dart';
+import 'package:real_social/src/repositories/user_repository.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'router_provider.g.dart';
@@ -24,7 +24,7 @@ Raw<RootStackRouter> router(Ref ref) {
         guards: [AuthGuard(user)],
         builder: (context, data) => HomePage(),
       ),
-      NamedRouteDef(name: 'LandingRoute', path: '/landing', builder: (context, data) => LoginPage()),
+      NamedRouteDef(name: 'LandingRoute', path: '/landing', builder: (context, data) => LandingPage()),
     ],
   );
 }

@@ -16,7 +16,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$RealWord {
 
- int get id; String get word; String get ownerId;
+ int get id; String get word;@JsonKey(name: 'owner_id') String get ownerId;
 /// Create a copy of RealWord
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -49,7 +49,7 @@ abstract mixin class $RealWordCopyWith<$Res>  {
   factory $RealWordCopyWith(RealWord value, $Res Function(RealWord) _then) = _$RealWordCopyWithImpl;
 @useResult
 $Res call({
- int id, String word, String ownerId
+ int id, String word,@JsonKey(name: 'owner_id') String ownerId
 });
 
 
@@ -82,12 +82,12 @@ as String,
 @JsonSerializable()
 
 class _RealWord implements RealWord {
-  const _RealWord({required this.id, required this.word, required this.ownerId});
+  const _RealWord({required this.id, required this.word, @JsonKey(name: 'owner_id') required this.ownerId});
   factory _RealWord.fromJson(Map<String, dynamic> json) => _$RealWordFromJson(json);
 
 @override final  int id;
 @override final  String word;
-@override final  String ownerId;
+@override@JsonKey(name: 'owner_id') final  String ownerId;
 
 /// Create a copy of RealWord
 /// with the given fields replaced by the non-null parameter values.
@@ -122,7 +122,7 @@ abstract mixin class _$RealWordCopyWith<$Res> implements $RealWordCopyWith<$Res>
   factory _$RealWordCopyWith(_RealWord value, $Res Function(_RealWord) _then) = __$RealWordCopyWithImpl;
 @override @useResult
 $Res call({
- int id, String word, String ownerId
+ int id, String word,@JsonKey(name: 'owner_id') String ownerId
 });
 
 
